@@ -54,7 +54,7 @@ func Info(format string, args ...interface{}) {
 
 func check(e error) {
 	if e != nil {
-		panic(e)
+		log.Fatal(err)
 	} else if _, ok := e.(*github.RateLimitError); ok {
 		log.Println("hit rate limit")
 	} else if _, ok := e.(*github.AcceptedError); ok {
