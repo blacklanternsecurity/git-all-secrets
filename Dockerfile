@@ -38,7 +38,7 @@ RUN /bin/bash -c "source ~/.bashrc && cd /data/repo-supervisor && npm install --
 
 WORKDIR /data
 
-RUN go get github.com/google/go-github/github && go get github.com/satori/go.uuid && go get golang.org/x/oauth2
+RUN go get github.com/google/go-github/github && go get github.com/satori/go.uuid && go get golang.org/x/oauth2 && git -C $GOPATH/src/github.com/satori/go.uuid checkout v1.2.0
 RUN go build -o gitallsecrets .
 
 ENTRYPOINT ["./gitallsecrets"]
