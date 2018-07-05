@@ -25,9 +25,9 @@ If all the tools are used to scan, the final output from the tool combines the o
 
 ## Getting started
 The easiest way to run `git-all-secrets` is via Docker and I highly recommend installing Docker if you don't already have it. Once you have Docker installed,
-* Type `docker run --rm -it abhartiya/tools_gitallsecrets --help` to understand the different flags it can take as inputs.
-* Once you know what you want to scan, type something like `docker run -it abhartiya/tools_gitallsecrets -token=<> -org=<>`. You can also specify a particular tool to use for scanning by typing something like `docker run -it abhartiya/tools_gitallsecrets -token=<> -org=<> -toolName=<>`. Options are `thog` and `repo-supervisor`.
-* If you want to run truffleHog with the default regex AND the high entropy settings, provide the `thogEntropy` flag like this - `docker run -it abhartiya/tools_gitallsecrets -token=<> -org=<> -toolName=thog -thogEntropy`.
+* Type `docker run --rm -it blacklanternsecurity/tools_gitallsecrets --help` to understand the different flags it can take as inputs.
+* Once you know what you want to scan, type something like `docker run -it blacklanternsecurity/tools_gitallsecrets -token=<> -org=<>`. You can also specify a particular tool to use for scanning by typing something like `docker run -it blacklanternsecurity/tools_gitallsecrets -token=<> -org=<> -toolName=<>`. Options are `thog` and `repo-supervisor`.
+* If you want to run truffleHog with the default regex AND the high entropy settings, provide the `thogEntropy` flag like this - `docker run -it blacklanternsecurity/tools_gitallsecrets -token=<> -org=<> -toolName=thog -thogEntropy`.
 * After the container finishes running, retrieve the container ID by typing `docker ps -a`.
 * Once you have the container ID, get the results file from the container to the host by typing `docker cp <container-id>:/data/results.txt .`
 
