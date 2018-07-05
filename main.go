@@ -72,7 +72,7 @@ func gitclone(cloneURL string, repoName string, wg *sync.WaitGroup) {
 	err := cmd.Run()
 	if err != nil {
 		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
-		panic(err)
+		log.Fatal(err)
 	}
 }
 
